@@ -1,0 +1,69 @@
+.carousel-wrapper { overflow: hidden;   
+    perspective: 1000px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(white,rgb(148, 107, 171),rgba(119, 23, 140, 0.2)) ;
+}
+#workheading{
+    
+    text-decoration-thickness: 2px; /*thinner */
+    text-underline-offset: 10px; 
+    font-family: "KateMarleyDemo";
+    font-size: 4rem;
+    color: #02835c;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 100;
+}
+.carousel {background: transparent;
+    position: relative;
+    transform-style: preserve-3d;
+    transition:  30s;
+}
+.firebase-image {
+    height: 28% !important;
+    width: 20% !important;  
+    margin: 0 auto;
+    display: block;
+}
+.portfolio-image {
+    height: 32% !important;
+    width: 21% !important;  
+    margin: 0 auto;
+    padding: 10px;
+    display: block;
+}
+
+.carousel-item {font-family: "Kurov-Light";
+    padding: 30px;
+    text-align: center;
+    position: absolute;
+    width: 400px;
+    height: 280px;
+    background: rgba(235, 155, 155, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.s;
+    box-shadow: 0 0 5px rgb(255, 123, 0);
+    cursor: pointer;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.carousel-item h2 {
+    text-align: center;
+    margin-top: 1rem;
+    color: #af0000;
+}
+
+.carousel-item:hover {
+    box-shadow: 0 0 20px rgb(0, 26, 255);
+   animation-play-state: paused;
+}
+

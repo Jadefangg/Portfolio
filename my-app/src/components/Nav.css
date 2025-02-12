@@ -1,0 +1,98 @@
+@media screen and (max-width: 768px) {
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .github-icon, .linkedIn-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+@font-face {
+    font-family: 'Tieldsa-Regular';
+    src: url('/public/fonts/Tieldsa-Regular-BF67662d25f2312.otf') format('opentype');
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+}
+
+#initial { 
+    text-decoration: underline;
+    color: #b5771a;
+    font-size: 4rem;
+    font-weight: 100;
+    font-family: 'Tieldsa-Regular', sans-serif;
+    
+}
+
+
+.nav-logo {
+    margin-left: .7rem;
+}
+#con{
+    font-size: 36px;
+    
+}
+.star-logo {align-items: center;
+    fill: rgb(255, 0, 0);
+    transition: all 0.2s ease;
+    animation: rotateStar 1.5s linear infinite;
+}
+
+
+
+@keyframes rotateStar {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.nav-links {
+    font-family: 'kurov-light';
+    display: flex;
+    gap: 1.4rem;
+    margin-right: .5rem;
+}
+
+.nav-links a {  font-family: 'kurov-light';
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+}
