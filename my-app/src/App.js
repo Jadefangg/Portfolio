@@ -158,7 +158,7 @@ return (
                      <div className="inTouch">
                      <Stars count={20} />
                         <div><h1>Lets work together</h1>
-                        <p>Have a question? <br/> or a project you'd like to discuss?</p><br/><br/><br/><br/>
+                        <p>Have a question? <br/> Or a project you'd like to discuss?</p><br/><br/><br/><br/>
                         
                         </div>
                         <a href="mailto:sartajsingh@ilumedev.com">sartajsingh@ilumedev.com</a>                     </div>
