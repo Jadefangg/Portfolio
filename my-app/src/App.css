@@ -2,23 +2,39 @@
 /* Mobile-first media queries */
 /* Existing card styles... */
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
+    .parallax-outer {
+        height: 100vh;
+    }
+
+    .copy h1 {
+        font-size: 80px;
+    }
+    .cards-section {
+        padding: 1rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .cards-container {
         grid-template-columns: 1fr;
-        padding: 1rem;
-        gap: 1rem;
     }
 
     .card {
+        width: 90%;
+        height: auto;
+        min-height: 60vh;
+        margin: 0 auto;
         padding: 1.5rem;
-        min-height: auto;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
     }
-
     .card h3 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }
-
     .card p {
         font-size: 0.9rem;
         line-height: 1.6;
@@ -28,24 +44,39 @@
         font-size: 0.9rem;
     }
 
-    .cards-section {
+    .inTouch {
         padding: 2rem 1rem;
+    }
+
+    .inTouch h1 {
+        font-size: 2rem;
+    }
+
+    .inTouch p {
+        font-size: .1rem;
+    }
+
+    .inTouch a {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .mountain-1, .mountain-2, .mountain-3 {
+        width: 100%;
+        height: auto;
+    }
+
+    .sun {
+        width: auto;
+        height: auto;
     }
 }
 
-/* For very small devices */
-@media screen and (max-width: 480px) {
-    .card {
-        padding: 1rem;
-    }
 
-    .card h3 {
-        font-size: 1.25rem;
-    }
 
-    .card p {
-        font-size: 0.85rem;
-    }
+/* Improve touch interactions */
+.card, .inTouch a {
+    touch-action: manipulation;
 }
 
 /* For landscape orientation on mobile */
@@ -58,55 +89,11 @@
         padding: 1rem;
     }
 }
-@media screen and (max-width: 768px) {
-    .copy h1 {
-        font-size: clamp(1rem, 4vw, 2.5rem);
-        letter-spacing: 2px;
-    }
-
-    .cards-container {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-    }
-
-    .card {
-        padding: 30px;
-        font-size: 2rem;
-    }
-
-    #sartaj {
-        font-size: 18px;
-    }
-
-    .inTouch h1 {
-        font-size: 4rem;
-        padding: 40px;
-    }
-
-    .parallax img {
-        width: 100%;
-        height: auto;
-    }
-
-    .mountain-1, .mountain-2, .mountain-3 {
-        bottom: 0;
-    }
-}
 
 /* Tablet adjustments */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .cards-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.8rem;
-    }
-
-    .card {
-        padding: 40px;
-    }
-}
 
 /* Ensure minimum spacing on very small devices */
-@media screen and (max-width: 320px) {
+/* @media screen and (max-width: 320px) {
     .card {
         padding: 20px;
     }
@@ -114,10 +101,10 @@
     .inTouch h1 {
         font-size: 3rem;
     }
-}
+} */
 
 /* Handle landscape orientation */
-@media screen and (max-height: 500px) and (orientation: landscape) {
+/* @media screen and (max-height: 500px) and (orientation: landscape) {
     .parallax {
         height: 150vh;
     }
@@ -125,8 +112,8 @@
     .copy {
         top: 65%;
     }
-}
-*,
+} */
+
 html,
 body {
     margin: 0;
@@ -207,7 +194,12 @@ body {
     transform: translate(-50%, -50%);
     width: 40%;
 }
-
+@media screen and (max-width: 768px) {
+    .sun {
+        width: 100%; 
+        height: 100%;
+    }
+}
 
 .copy {z-index: 1;
     width: 90%;
@@ -260,13 +252,13 @@ line-height: 1.2;
     width: 50%;
 }
 .cards-section {
-    padding-top: 40px;
     position: relative;
     width: 100%;
     min-height: 100vh;
     background:linear-gradient( #282a57,#2f3374,#ffffff,#ffffff);
     display: flex;
     align-items: center;
+    
 }
 
 .cards-container {
@@ -274,7 +266,7 @@ line-height: 1.2;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     max-width: 1200px;
-    width: 90%;
+    width: auto;
     margin: 0 auto;
     padding: 4rem;
 }
@@ -323,6 +315,43 @@ color: rgb(193, 0, 0);
 .card:hover p {
     transform: translateY(-15px);
 }
+@media screen and (max-width: 768px) {
+    .cards-section {
+        width: 100%;
+        min-height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: left !important;
+        overflow-x: hidden; /* Add this to prevent horizontal scroll */
+
+    }
+
+    .cards-container {
+        width: 100% !important;
+        grid-template-columns: 1fr !important;
+        padding: 1rem !important;
+        gap: 2rem !important;
+    }
+
+    .card {
+        width: 70% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 auto !important;
+        padding: 1rem !important;
+        font-size: 1rem !important;
+    }
+
+    .card h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .card p {
+        font-size: 0.9rem !important;
+    }
+}
+
+
 .inTouch{
     height: 100vh;
     width: 100%;
@@ -368,4 +397,24 @@ color: rgb(193, 0, 0);
     color: white;
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(107, 2, 131, 0.3);
+}
+@media screen and (max-width: 768px) {
+    .inTouch {
+        padding: 2rem 1rem;
+        overflow: hidden;
+    }
+
+    .inTouch h1 {
+        font-size: 5rem;
+    }
+
+    .inTouch p {
+        font-size: 3rem;
+        padding: 20px;
+    }
+
+    .inTouch a {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
 }

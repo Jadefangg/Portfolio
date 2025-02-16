@@ -45,7 +45,7 @@
     background: rgba(235, 155, 155, 0.9);
     border-radius: 10px;
     overflow: hidden;
-    transition: all 0.s;
+    transition: all 0.5s ease;
     box-shadow: 0 0 5px rgb(255, 123, 0);
     cursor: pointer;
 }
@@ -65,5 +65,12 @@
 .carousel-item:hover {
     box-shadow: 0 0 20px rgb(0, 26, 255);
    animation-play-state: paused;
+}
+@media screen and (max-width: 768px) {
+    .carousel-item {
+        width: 250px;
+        height: 350px;
+    }
+    
 }
 

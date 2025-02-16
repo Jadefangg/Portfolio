@@ -50,7 +50,7 @@ const Carousel3D = () => {
         let radius = 400; // Distance from center
         let autoRotate = true;
         let rotateSpeed = 60; // Negative for clockwise
-        let rotationPerFrame = 0.2;
+        let rotationPerFrame = 1;
         let imgWidth = 400;
         let imgHeight = 300;
 
