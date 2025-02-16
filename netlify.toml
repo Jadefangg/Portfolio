@@ -1,0 +1,14 @@
+[build]
+  base = "./my-app"
+  command = "CI=false npm run build"
+  publish = "./my-app/build"
+
+[build.environment]
+  NODE_VERSION = "18.17.0"
+  NPM_VERSION = "9.6.7"
+  CI = "false"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
