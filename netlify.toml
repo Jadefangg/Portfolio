@@ -1,7 +1,7 @@
 [build]
-  base = "./my-app"
+  base = "my-app"
   command = "CI=false npm run build"
-  publish = "./my-app/build"
+  publish = "my-app/build"
 
 [build.environment]
   NODE_VERSION = "18.17.0"
