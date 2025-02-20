@@ -62,14 +62,17 @@
     color: #af0000;
 }
 
+
+
 .carousel-item:hover {
     box-shadow: 0 0 20px rgb(0, 26, 255);
    animation-play-state: paused;
 }
 @media screen and (max-width: 768px) {
     .carousel-item {
-        width: 250px;
-        height: 350px;
+        width: 200px;
+        height: 250px;
+        padding-bottom: 30px;
     }
     
 }

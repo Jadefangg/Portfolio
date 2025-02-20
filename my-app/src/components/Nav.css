@@ -1,21 +1,4 @@
-@media screen and (max-width: 768px) {
-    .nav-container {
-        padding: 1rem;
-    }
 
-    .nav-links {
-        gap: 1rem;
-    }
-
-    .nav-logo h1 {
-        font-size: 1.5rem;
-    }
-
-    .github-icon, .linkedIn-icon {
-        width: 28px;
-        height: 28px;
-    }
-}
 @font-face {
     font-family: 'Tieldsa-Regular';
     src: url('/public/fonts/Tieldsa-Regular-BF67662d25f2312.otf') format('opentype');
@@ -33,7 +16,7 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -42,10 +25,14 @@ html {
 #initial { 
     text-decoration: underline;
     color: #b5771a;
-    font-size: 4rem;
+    font-size: 4rem; /* Reduced from 5rem */
     font-weight: 100;
     font-family: 'Tieldsa-Regular', sans-serif;
-    
+    line-height: 1; /* Add this */
+    margin: 0; /* Add this */
+    padding: 0; /* Add this */
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
 }
 
 
@@ -57,9 +44,8 @@ html {
     
 }
 .star-logo {align-items: center;
-    fill: rgb(255, 0, 0);
-    transition: all 0.2s ease;
-    animation: rotateStar 1.5s linear infinite;
+    fill: rgb(212, 0, 255);
+    animation: rotateStar 1s linear infinite;
 }
 
 
@@ -80,7 +66,8 @@ html {
     font-family: 'kurov-light';
     display: flex;
     gap: 1.4rem;
-    margin-right: .5rem;
+    padding-right: 3rem;
+    overflow: hidden;
 }
 
 .nav-links a {  font-family: 'kurov-light';
@@ -95,4 +82,30 @@ html {
 .nav-links a:hover {
     transform: translateY(-2px);
     opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: .7rem;
+        padding-right: 1rem;
+    }
+    #initial {
+        font-size: 2rem;
+    }
+    .nav-logo h1 {
+        font-size: 1rem;
+    }
+
+    .github-icon, .linkedIn-icon {
+        width: 18px;
+        height: 18px;
+    }
+    #con{
+        font-size: 24px;
+    }
 }

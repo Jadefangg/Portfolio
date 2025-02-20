@@ -80,15 +80,6 @@
 }
 
 /* For landscape orientation on mobile */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-    .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card {
-        padding: 1rem;
-    }
-}
 
 /* Tablet adjustments */
 
@@ -194,12 +185,12 @@ body {
     transform: translate(-50%, -50%);
     width: 40%;
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .sun {
         width: 100%; 
         height: 100%;
     }
-}
+} */
 
 .copy {z-index: 1;
     width: 90%;
@@ -212,17 +203,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 
 }
-.copy h1 {
+.copy h1 {font-size: 5rem;
     text-align: center;
-    color: rgb(160, 1, 1);
+    color: rgb(0, 79, 119);
     font-family: "KateMarleyDemo";
-    font-size: clamp(1.5rem, 6vw, 6rem);
-line-height: 1.2;
+    line-height: 1.1;
     letter-spacing: 4px;
     text-rendering: optimizeLegibility;
-    font-weight: 100;
+    font-weight: 600;
 }
 /* .copy h2{
     text-align: center;
@@ -316,6 +307,10 @@ color: rgb(193, 0, 0);
     transform: translateY(-15px);
 }
 @media screen and (max-width: 768px) {
+    .copy h1 {
+        font-size: 2.66rem;
+        font-weight: 800;
+    }
     .cards-section {
         width: 100%;
         min-height: 100vh !important;
@@ -326,7 +321,7 @@ color: rgb(193, 0, 0);
 
     }
 
-    .cards-container {
+    .cards-container {overflow: hidden;
         width: 100% !important;
         grid-template-columns: 1fr !important;
         padding: 1rem !important;
@@ -405,7 +400,7 @@ color: rgb(193, 0, 0);
     }
 
     .inTouch h1 {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     .inTouch p {
@@ -415,6 +410,6 @@ color: rgb(193, 0, 0);
 
     .inTouch a {
         font-size: 1.5rem;
-        padding: 20px;
+        padding-bottom: 30px;
     }
 }

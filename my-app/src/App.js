@@ -114,7 +114,7 @@ return (
                 </div>      
                 <LogoSlider />           
                      <section ref={cardsRef} className="cards-section">
-                     <Stars count={15} />
+                        <Stars count={20} />
                          <div className="cards-container">
                                 <div className="card">
                                  <h3>Hello!</h3>

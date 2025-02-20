@@ -47,7 +47,7 @@ const Carousel3D = () => {
     ];
     useEffect(() => {
         const carousel = carouselRef.current;
-        let radius = 400; // Distance from center
+        let radius = 350; // Distance from center
         let autoRotate = true;
         let rotateSpeed = 60; // Negative for clockwise
         let rotationPerFrame = 1;
@@ -87,7 +87,7 @@ const Carousel3D = () => {
             e.preventDefault();
             let dx = e.clientX - xPos;
             xPos = e.clientX;
-            rotationRef.current += dx * 3.5;
+            rotationRef.current += dx * 4;
             rotateCarousel(dx);
         }
 

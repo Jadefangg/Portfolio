@@ -10,8 +10,8 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    fill: rgb(0, 0, 0);
-    opacity: 0.6;
+    fill: rgb(0, 138, 62);
+    opacity: 0;
     animation: twinkleStar 1.8s ease-in-out infinite;
     will-change: transform;
 }
@@ -19,7 +19,7 @@
 @keyframes twinkleStar {
     0% {
         transform: rotate(0deg) scale(1);
-        opacity: 0.1;
+        opacity: 0;
     }
     50% {
         transform: rotate(180deg) scale(1.2);
@@ -27,6 +27,6 @@
     }
     100% {
         transform: rotate(360deg) scale(1);
-        opacity: 0.1;
+        opacity: 0;
     }
 }

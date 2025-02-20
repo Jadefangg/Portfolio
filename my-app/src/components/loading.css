@@ -11,7 +11,6 @@
     z-index: 9999;
     opacity: 1;
     visibility: visible;
-    transition: all 2s ease-out;
 }
 
 .loading.fade-out {
@@ -22,14 +21,16 @@
 .star {
     width: 100px;
     height: 100px;
-    background: rgb(12, 1, 132);
+    background: rgb(93, 90, 118);
     clip-path: path('M 50 10 C 60 55 90 50 100 50 C 60 60 50 90 50 100 C 40 60 10 50 0 50 C 40 40 50 10 50 0');
     position: relative;
-    animation: role 3s ease-in-out infinite;
+    animation: role 3s ease infinite;
     transform-origin: center;
+    border: solid;
 }
+
 .star:before {
-    border-bottom: 80px solid rgb(12, 1, 132);
+    border-bottom: 80px solid rgb(161, 158, 197);
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
     position: absolute;
@@ -50,7 +51,7 @@
     width: 0;
     height: 0;
     border-right: 100px solid transparent;
-    border-bottom: 70px solid rgb(12, 1, 132);
+    border-bottom: 70px solid rgb(157, 154, 195);
     border-left: 100px solid transparent;
     transform: rotate(-70deg);
     content: '';
@@ -61,7 +62,7 @@
         transform: rotate(0deg) scale(1);
     }
     50% {
-        transform: rotate(180deg) scale(2);
+        transform: rotate(180deg) scale(1.1);
     }
     100% {
         transform: rotate(360deg) scale(1);
