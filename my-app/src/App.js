@@ -114,7 +114,7 @@ return (
                 </div>      
                 <LogoSlider />           
                      <section ref={cardsRef} className="cards-section">
-                        <Stars count={20} />
+                        <Stars count={10} />
                          <div className="cards-container">
                                 <div className="card">
                                  <h3>Hello!</h3>
@@ -156,7 +156,7 @@ return (
                      </section>
                      <Carousel3D />
                      <div className="inTouch">
-                     <Stars count={20} />
+                     <Stars count={10} />
                         <div><h1>Lets work together</h1>
                         <p>Have a question? <br/> Or a project you'd like to discuss?</p><br/><br/><br/><br/>
                         
