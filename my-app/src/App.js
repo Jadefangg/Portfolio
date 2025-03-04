@@ -161,7 +161,7 @@ return (
                         <p>Have a question? <br/> Or a project you'd like to discuss?</p><br/><br/><br/><br/>
                         
                         </div>
-                        <a href="mailto:sartajsingh@ilumedev.com">sartajsingh@ilumedev.com</a>                     </div>
+                        <a href="mailto:sartajsingh8@gmail.com">sartajsingh8@gmail.com</a>                     </div>
                      
                   
                      </>

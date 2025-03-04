@@ -1,9 +1,25 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .carousel-wrapper { overflow: hidden;   
-    perspective: 1000px;
+    -webkit-perspective: 1000px;   
+            perspective: 1000px;
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background:-webkit-gradient(linear,left top, left bottom,from(white),color-stop(rgb(148, 107, 171)),to(rgba(119, 23, 140, 0.2))) ;
+    background:-o-linear-gradient(white,rgb(148, 107, 171),rgba(119, 23, 140, 0.2)) ;
     background:linear-gradient(white,rgb(148, 107, 171),rgba(119, 23, 140, 0.2)) ;
 }
 #workheading{
@@ -19,7 +35,10 @@
 }
 .carousel {background: transparent;
     position: relative;
-    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition:  30s;
+    -o-transition:  30s;
     transition:  30s;
 }
 .firebase-image {
@@ -45,15 +64,19 @@
     background: rgba(235, 155, 155, 0.9);
     border-radius: 10px;
     overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    box-shadow: 0 0 5px rgb(255, 123, 0);
+    -webkit-box-shadow: 0 0 5px rgb(255, 123, 0);
+            box-shadow: 0 0 5px rgb(255, 123, 0);
     cursor: pointer;
 }
 
 .carousel-item img {
     width: 100%;
     height: 70%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .carousel-item h2 {
@@ -65,8 +88,10 @@
 
 
 .carousel-item:hover {
-    box-shadow: 0 0 20px rgb(0, 26, 255);
-   animation-play-state: paused;
+    -webkit-box-shadow: 0 0 20px rgb(0, 26, 255);
+            box-shadow: 0 0 20px rgb(0, 26, 255);
+   -webkit-animation-play-state: paused;
+           animation-play-state: paused;
 }
 @media screen and (max-width: 768px) {
     .carousel-item {
@@ -76,4 +101,3 @@
     }
     
 }
-

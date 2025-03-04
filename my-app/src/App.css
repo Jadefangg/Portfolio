@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 /* Mobile-first media queries */
 /* Existing card styles... */
@@ -76,7 +83,8 @@
 
 /* Improve touch interactions */
 .card, .inTouch a {
-    touch-action: manipulation;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
 }
 
 /* For landscape orientation on mobile */
@@ -109,7 +117,8 @@ html,
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 @font-face {
     font-family: 'Tieldsa-Regular';
@@ -182,7 +191,9 @@ body {
 .sun {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 40%;
 }
 /* @media screen and (max-width: 768px) {
@@ -198,15 +209,26 @@ body {
     position: absolute;
     top: 76%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     overflow: hidden;
 
 }                                              /*  hero text */
-.copy h1 {font-size: 5rem;
+.copy h1 {font-size: 3.5rem;
     text-align: center;
     color: rgb(0, 79, 119);
     font-family: "KateMarleyDemo";
@@ -246,14 +268,22 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
+    background:-webkit-gradient( linear,left top, left bottom,from(#282a57),color-stop(#2f3374),color-stop(#ffffff),to(#ffffff));
+    background:-o-linear-gradient( #282a57,#2f3374,#ffffff,#ffffff);
     background:linear-gradient( #282a57,#2f3374,#ffffff,#ffffff);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     
 }
 
 .cards-container {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1rem 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     max-width: 1200px;
@@ -268,7 +298,10 @@ body {
     background: #e3c1c1;
     padding: 50px;
     border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    -webkit-transition: background-color 0.15s ease;
+    -o-transition: background-color 0.15s ease;
     transition: background-color 0.15s ease;
 }
 #sartaj{ color: #bb6700;
@@ -288,7 +321,11 @@ color: rgb(193, 0, 0);
     font-family: "kurov-light";
     font-size: 3rem;
     text-rendering: optimizeSpeed;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -298,13 +335,19 @@ color: rgb(193, 0, 0);
     font-size: 22px;
     color: #0e4802;
     line-height: 1.2;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .card:hover h3,
 .card:hover p {
-    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+            transform: translateY(-15px);
 }
 @media screen and (max-width: 768px) {
     .copy h1 {
@@ -314,15 +357,23 @@ color: rgb(193, 0, 0);
     .cards-section {
         width: 100%;
         min-height: 100vh !important;
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
         display: flex !important;
-        flex-direction: column !important;
-        justify-content: left !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+                flex-direction: column !important;
+        -webkit-box-pack: left !important;
+            -ms-flex-pack: left !important;
+                justify-content: left !important;
         overflow-x: hidden; /* Add this to prevent horizontal scroll */
 
     }
 
     .cards-container {overflow: hidden;
         width: 100% !important;
+        -ms-grid-columns: 1fr !important;
         grid-template-columns: 1fr !important;
         padding: 1rem !important;
         gap: 2rem !important;
@@ -353,9 +404,14 @@ color: rgb(193, 0, 0);
     background-color: rgba(119, 23, 140, 0.2);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 .inTouch h1{
-    padding: 10px;
+    margin: 40px;
     text-align: center;
     font-size: 8rem;
     font-family: "KateMarleyDemo";
@@ -378,11 +434,14 @@ color: rgb(193, 0, 0);
     font-family: "kurov-light";
     font-size: 2rem;
     text-decoration: none;
-    padding-top: 1rem;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     padding: 1rem 2rem;
     border: 2px solid #6b0283;
     border-radius: 48px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 2rem auto;
 }
@@ -390,8 +449,11 @@ color: rgb(193, 0, 0);
 .inTouch a:hover {
     background-color: #02831a;
     color: white;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(107, 2, 131, 0.3);
+    -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+    -webkit-box-shadow: 0 5px 15px rgba(107, 2, 131, 0.3);
+            box-shadow: 0 5px 15px rgba(107, 2, 131, 0.3);
 }
 @media screen and (max-width: 768px) {
     .inTouch {
