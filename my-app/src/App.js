@@ -95,11 +95,11 @@ return (
             <>
                 <div className="parallax-outer">
                     <div ref={parallaxRef} style={{ 
-                        background: `linear-gradient(goldenrod
-                        ,rgb(255, 255, 255) ${background}%,
-                        rgb(255, 255, 255),
-                        rgb(217, 119, 44))` 
-                    }} className='parallax'>
+                        background: `linear-gradient(rgb(89, 0, 0) 0%
+                        ,rgb(0, 0, 0) ${background}%,
+                        rgb(212, 16, 16),
+                        rgb(0, 0, 0))` }} 
+                    className='parallax'>
                         <Stars count={30} />
                         <img ref={mountain3} className='mountain-3' src="/images/mountain-3.svg" alt="Mountain 3" />
                         <img ref={mountain2} className='mountain-2' src="/images/mountain-2.svg" alt="Mountain 2" />

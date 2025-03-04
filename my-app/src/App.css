@@ -113,14 +113,35 @@
     }
 } */
 
-html,
-body {
+* {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
-@font-face {
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Fix for horizontal scroll on mobile */
+body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Fix container width issues */
+.parallax-outer, 
+.cards-section,
+.inTouch {
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}@font-face {
     font-family: 'Tieldsa-Regular';
     src: url('../public/fonts/Tieldsa-Regular-BF67662d25f2312.otf') format('opentype');
     font-weight: normal;
@@ -228,14 +249,14 @@ body {
     overflow: hidden;
 
 }                                              /*  hero text */
-.copy h1 {font-size: 3.5rem;
+.copy h1 {font-size: 4.5rem;
     text-align: center;
-    color: rgb(0, 79, 119);
-    font-family: "KateMarleyDemo";
+    color: rgb(0, 163, 60);
+    font-family: "kurov-light";
+    font-weight: lighter;
     line-height: 1.1;
     letter-spacing: 4px;
     text-rendering: optimizeLegibility;
-    font-weight: 600;
 }
 /* .copy h2{
     text-align: center;
@@ -389,7 +410,7 @@ color: rgb(193, 0, 0);
     }
 
     .card h3 {
-        font-size: 1.5rem !important;
+        font-size: 1.2rem !important;
     }
 
     .card p {
