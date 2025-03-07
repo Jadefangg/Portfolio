@@ -217,13 +217,12 @@ body {
             transform: translate(-50%, -50%);
     width: 40%;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .sun {
-        width: 100%; 
-        height: 100%;
+        width: 100%; /* Larger relative size on mobile */
+        min-width: 200px; /* Force minimum size */
     }
-} */
-
+}
 .copy {z-index: 1;
     width: 90%;
     text-align: center;
@@ -483,16 +482,15 @@ color: rgb(193, 0, 0);
     }
 
     .inTouch h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .inTouch p {
-        font-size: 3rem;
-        padding: 20px;
+        font-size: 2.5rem;
     }
 
     .inTouch a {
-        font-size: 1.5rem;
-        padding-bottom: 30px;
+        font-size: 1rem;
+        margin-bottom: 20px;
     }
 }
